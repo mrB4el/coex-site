@@ -16,6 +16,7 @@ a:hover {text-decoration:underline;}
 h1,h2,h3,h4,h5,h6 {display:block; margin:10px 0; padding:0; font:bold 22px/1.2 'Segoe UI', Tahoma, Geneva, sans-serif;}
 
 h1 {font-size:22px;}
+
 h2 {font-size:22px;}
 h3 {font-size:21px;}
 h4 {font-size:20px;}
@@ -169,18 +170,22 @@ p {display:block; margin:10px 0;}
 
 
 .site-header{ 
-	overflow: hidden;
 	background-color: #515151;
-	display: flex;
-	justify-content: center;
 	font-size: larger;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+	justify-content: center;
+    overflow: hidden;
+    position: relative;
 }
 
 .site-header>a{	text-decoration: none;}
 
 .logo{
 	display: block;
-	width: 320px;
+	min-width: 320px;
 	text-align: center;
 
 	transition: all 0.3s ease;
@@ -199,13 +204,20 @@ nav{ margin: 0; padding: 0; }
 
 
 .site-menu{
-	display: block;
-	overflow: hidden;
-	position: relative;
+	display: flex;
+    width: 60%;
+    min-width: 320px;
+	
+	flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
 }
 .site-menu a{
 	color: #fff;
-	padding: 1em 2em;
+	padding: 1em;
 	display: inline-block;
 	transition: all 0.3s ease;
 	text-decoration: none;
@@ -224,8 +236,10 @@ section{
 }
 .sect-block{
 	margin: 0 auto;
-    width: 50%;
-    min-width: 320px;
+	width: 80%;
+	min-width: 320px;
+    max-width: 1100px;
+
 }
 .sect-block>img{
 	width: 100%;
@@ -235,7 +249,7 @@ section{
 	font-size: 62px;
     font-weight: 500;
     text-align: center;
-    margin: 1em 0;
+    margin: 1em 0 0.5em;
 }
 .sect-block .description{
 	padding: 0 1em 0.5em;
@@ -260,20 +274,68 @@ section{
 
 }
 
-.module{display: inline-block; padding: 20px; width: 200px}
-.module .icon{width: 150px; height: auto; display: block; margin: 0 auto; }
+.module{ display: inline-block; padding: 20px; width: 200px }
+.module .icon{ width: 150px; height: auto; display: block; margin: 0 auto; }
 .module h3{ font-weight: 300; text-align: center; }
 .module .decr-mod{ text-align: justify; }
 
 .install-block{
 	min-width: 320px;
 }
+.install-block .block{
+	margin-top: 0.5em;
+	min-width: 320px;
+	text-align: center;
+}
 
 .git-url{
 	display: block;
 }
-.git-url img{ display: block; }
+.git-url img{ display: block; margin: 0 auto; }
 .git-url span{ display: block; text-align: center;}
+
+#consist .sect-block .description{ padding-top: 0.5em; }
+
+.big-table{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.big-table>div{
+	padding: 1.5em 2em;
+	margin: 5px;
+	text-align: center;
+	font-size: 24px;
+	color: #fff;
+}
+.bft_coex{
+	flex-grow: 6;
+	width: 100%;
+	background-color: rgb(46, 204, 113);
+}
+.bft_system{
+	flex-grow: 4;
+	width: 65%;
+	background-color: rgb(91, 155, 213);
+}
+.bft_analys{
+	flex-grow: 2;
+	background-color: rgb(91, 155, 213);
+}
+.bft_module{
+	flex-grow: 1;
+	background-color: rgb(165, 165, 165);
+}
+
+#news h2{
+	font-size: 62px;
+    font-weight: 500;
+    text-align: center;
+    margin: 1em 0 0.5em;
+}
+div#vk_groups {
+    margin: 0 auto;
+}
 
 .site-footer{ 
 	background-color: #515151; 
@@ -281,8 +343,15 @@ section{
 	min-width: 320px;
 	overflow: hidden;
 }
-#consist .sect-block .description{ padding-top: 0.5em; }
+
 .site-footer .copyrights{ width: 100%; padding: 10px; }
 .site-footer .copyrights a { color: #6F6F6F; display: block; text-decoration: none; }
 .site-footer .copyrights a:hover{ color: #fff; }
 .site-footer .copyrights span{ display: block; color: #6F6F6F; }
+
+.site-footer .flex .block{
+	width: calc(100%/3);
+}
+.site-footer .flex .block ul li{
+	color: #6F6F6F;
+}
